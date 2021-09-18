@@ -58,4 +58,15 @@ func RegisterTable(db *gorm.DB) {
 		//后台表
 		models.Admin{},
 	)
+
+	//创建后台数据
+	var repeat models.Admin
+	db.Model(models.Admin{}).First(&repeat)
+	if repeat.ID == 0 {
+		var admin models.Admin
+		admin.Username = "admin"
+		admin.Password = "admin"
+		db.Model(models.Admin{}).Create(&admin)
+	}
+
 }
