@@ -40,3 +40,6 @@ CREATE DATABASE shop;
 go run main.go
 ```
 
+[微信小程序源码](https://github.com/hwdhy/shop_wx)
+
+[后台react源码](https://github.com/hwdhy/shop_react)
